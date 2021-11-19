@@ -14,15 +14,21 @@ public class CinemaLine {
         int z[] = new int[x];
         for(int i = 0; i!= x; i++){
              z[i]=in.nextInt();
-             if(z[0]>25){
+            y=y+z[i];
+            if(z[0]>25){
                  break;
              }
-            y=y+z[i];;
             if(z[i]==50){
-                y=y-25;
+                if(y<25){
+                    break;
+                }
+                else{y=y-25;}
             }
             if(z[i]==100){
-                y=y-75;
+                if(y<75){
+                    break;
+                }
+                else{y=y-75;}
             }
             if(y==0){
                 break;
