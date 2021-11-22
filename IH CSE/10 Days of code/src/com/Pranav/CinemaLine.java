@@ -5,42 +5,55 @@ import java.util.Scanner;
 
 public class CinemaLine {
     public static void main(String[] args) {
-        Scanner in= new Scanner(System.in);
-        int x=0;
-        x=in.nextInt();
-        int y = 0;
-        int i1 = 10000;
-        int x1 = x;
-        int z[] = new int[x];
-        for(int i = 0; i!= x; i++){
-             z[i]=in.nextInt();
-            y=y+z[i];
-            if(z[0]>25){
-                 break;
-             }
-            if(z[i]==50){
-                if(y<25){
+        Scanner in = new Scanner(System.in);
+        int x,i,y,tf = 0, f=0, h = 0;
+        x = in.nextInt();
+        for(i=0;i!=x;i++){
+            y= in.nextInt();
+            if(y==25){
+                tf++;
+            }
+            else if(y==50){
+                if(tf==0){
+                    System.out.println("NO");
                     break;
                 }
-                else{y=y-25;}
+                else{
+                    tf--;
+                    f++;
+                }
             }
-            if(z[i]==100){
-                if(y<75){
+            else if(y==100){
+                if(tf==0){
+                    System.out.println("NO");
                     break;
                 }
-                else{y=y-75;}
+                else if(tf>1 && f>1){
+                    tf--;
+                    f--;
+                    h++;
+                }
+                else if(f==0 && tf>3){
+                    tf=tf-3;
+                    h++;
+                }
             }
-            if(y==0){
-                break;
-            }
+        }
+        System.out.println("Yes");
 
-        }
-        if(y<=0){
-            System.out.println("NO");
-        }
-        else{
-            System.out.println("YES");
-        }
 
-    }
-}
+
+    }}
+
+
+
+
+
+
+
+
+
+
+
+
+
