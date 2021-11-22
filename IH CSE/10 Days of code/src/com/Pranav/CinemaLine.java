@@ -1,6 +1,5 @@
 package com.Pranav;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class CinemaLine {
@@ -43,7 +42,8 @@ public class CinemaLine {
 
 
 
-    }}
+    }
+}
 
 
 
