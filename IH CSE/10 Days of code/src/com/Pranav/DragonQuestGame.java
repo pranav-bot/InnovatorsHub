@@ -6,11 +6,11 @@ public class DragonQuestGame {
     public static void main(String[] args) {
         Scanner in =new Scanner(System.in);
         int x=in.nextInt();
-        int a,b,c;
+        Long a,b,c;
         for(int i=0;i!=x;i++){
-            a = in.nextInt();
-            b = in.nextInt();
-            c =in.nextInt();
+            a = in.nextLong();
+            b = in.nextLong();
+            c =in.nextLong();
             for(int j=0;j!=b;j++){
                 a=(a/2)+10;
             }
@@ -22,7 +22,9 @@ public class DragonQuestGame {
             }
             else{
                 System.out.println("No");
+
             }
+
 
 
         }

@@ -38,7 +38,7 @@ public class CinemaLine {
                 }
             }
         }
-        System.out.println("Yes");
+        System.out.println("YES");
 
 
 
