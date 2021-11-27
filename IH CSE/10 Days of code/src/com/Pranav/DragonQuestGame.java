@@ -24,6 +24,7 @@ public class DragonQuestGame {
                 System.out.println("No");
 
             }
+            System.out.println(a);
 
 
 

@@ -1,7 +1,6 @@
 package com.Pranav;
 
 import java.util.Scanner;
-import java.lang.Math;
 
 public class PythogorasTriplets {
     public static void main(String[] args) {
