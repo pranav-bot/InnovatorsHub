@@ -4,21 +4,21 @@ import java.util.Scanner;
 
 public class PythogorasTriplets {
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        int x,i,n=0;
-        int count=0;
-        x= in.nextInt();
-        for(i=0;i!=x;i++){
-            n= in.nextInt();
-            for(int j=2;j<=n;j++){
-                int u =j+1;
-                int v=j-1;
-                if(u==(v*v)-j && u*u==(v*v)+(j*j)){
-                    count++;
-                }
-            }
-            System.out.println(count);
-        }
+        Scanner sc = new Scanner(System.in);
 
+        int t = sc.nextInt();
+        //t is the no. of test cases
+        for (int tc = 0; tc < t; ++tc) {
+            int c = sc.nextInt();
+            System.out.println(solve(c));
+        }
+    }
+    static int solve(int c) {
+        int a = (int) Math.round(Math.sqrt(2 * c - 1));
+        if (a * a > 2 * c - 1) {
+            --a;
+        }
+        return (a - 1) / 2;
     }
 }
+//The logic is to check whether a=sqrt(2c-1)

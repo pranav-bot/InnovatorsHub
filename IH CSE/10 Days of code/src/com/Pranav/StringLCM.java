@@ -1,40 +1,29 @@
 package com.Pranav;
 
+import java.math.BigInteger;
 import java.util.Scanner;
 
 public class StringLCM {
     public static void main(String[] args) {
-        Scanner in=new Scanner(System.in);
-        int n=in.nextInt();
-        for(int i=0;i!=n;i++){
-            String s=in.next();
-            String t=in.next();
-            String[] ArrayofS=s.split("");
-            String[] ArrayofT=t.split("");
-            int x= s.length();
-            int y= t.length();
-            int a=(x*y)/gcd(x,y);
-            String ans="";
-            int k=0;
-            for(int j=0;j!=a;j++){
-                ans += ArrayofS[k];
-                k++;
-                k%=n;
-            }
+        Scanner sc = new Scanner(System.in);
 
+        int q = sc.nextInt();
+        for (int tc = 0; tc < q; ++tc) {
+            String s = sc.next();
+            String t = sc.next();
 
-        }
-    }
-    static int gcd(int x, int y){
-        while(x!=y){
-            if(x>y){
-                x=x-y;
-            }
-            else{
-                y=y-x;
-            }
+            System.out.println(solve(s, t));
 
-        }
-        return x;
+        }        }
+
+    static String solve(String s, String t) {
+        int length = s.length() * t.length() / BigInteger.valueOf(s.length()).gcd(BigInteger.valueOf(t.length())).intValue();
+        String extendedS = s.repeat(length / s.length());
+        String extendedT = t.repeat(length / t.length());
+
+        return extendedS.equals(extendedT) ? extendedS : "-1";
     }
 }
+//The logic here is to count the length of both the strings and find the lcm between the length of the strings using s.length*t.length/gcd(s,t)
+//and then use the lcm to print the extended string by dividing the string.repeat(lcm/string length)
+//if there is no lcm we print -1

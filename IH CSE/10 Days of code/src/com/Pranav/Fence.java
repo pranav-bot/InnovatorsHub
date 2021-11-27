@@ -1,6 +1,5 @@
 package com.Pranav;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Fence {
@@ -30,4 +29,8 @@ public class Fence {
     }
 }
 
-
+//The logic here is to find the smallest consecutive sum of k terms in the h array
+//Firstly we take the sum of first consecutive k terms and assume it to be the smallest then we add the next element in the array and subtract the first element which gives the consecutive sum of next k elements
+//then we compare the minsum and the next 3 element's sum if min sum is <
+//then we make next3sum=minsum and store the index
+//in the end we print the index of the first element out of the k terms having the smallest consecutive sum

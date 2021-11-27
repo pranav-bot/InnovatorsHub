@@ -20,6 +20,18 @@ public class FloorandMod {
              for (int j=1;j!=y;j++){
                  b[j-1]=j;
              }
+             for(int j=0;j!=x;j++){
+                 for(int k=0;k!=y;k++){
+                     int r=a[j+1]/b[k+1];
+                     if (a[j+1]==(b[k+1]+1)*r){
+                         count++;
+
+                     }
+                  }
+             }
         }
     }
 }
+
+//the logic is to check whether a=(b+1)*x where a is the numerator and b is the denominator and x is the remainder
+//the code dosent work at the moment
